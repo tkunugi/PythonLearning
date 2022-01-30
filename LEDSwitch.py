@@ -1,6 +1,5 @@
 from gpiozero import LED, Button
 
-
 led_red = LED(2)
 led_green = LED(3)
 led_blue = LED(4)
