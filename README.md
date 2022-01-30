@@ -1,3 +1,3 @@
-# PythonLearning
+# PythonLearningForRaaspberryPi
 
-Programs for my Python learning
+Programs for my Python learning for raspberry pi
