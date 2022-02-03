@@ -1,8 +1,8 @@
 from gpiozero import LED, Button
 
-led_red = LED(2)
-led_green = LED(3)
-led_blue = LED(4)
+led_red = LED(20)
+led_green = LED(16)
+led_blue = LED(12)
 button = Button(5, pull_up=False)
 
 while True:

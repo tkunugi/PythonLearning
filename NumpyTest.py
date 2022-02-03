@@ -44,3 +44,4 @@ print('y[1, :]', y[1,:])
 #初期化
 xx = np.random.randint(0,10, (3,3))
 print('xx', xx)
+
