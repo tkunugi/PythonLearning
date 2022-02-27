@@ -1,4 +1,3 @@
-  
 # RTC_DS1302 - Python Hardware Programming Education Project For Raspberry Pi
 # Copyright (C) 2015 Jason Birch
 #
@@ -29,9 +28,9 @@ import RPi.GPIO
 
 
 class RTC_DS1302:
-   RTC_DS1302_SCLK = 9
-   RTC_DS1302_CE = 11
-   RTC_DS1302_IO = 10
+   RTC_DS1302_SCLK = 3
+   RTC_DS1302_CE = 4
+   RTC_DS1302_IO = 2
 
    CLK_PERIOD = 0.00001
 
@@ -97,7 +96,8 @@ class RTC_DS1302:
          RPi.GPIO.output(self.RTC_DS1302_SCLK, 0)
 
          Bit = operator.mod(Byte, 2)
-         Byte = operator.div(Byte, 2)
+         #Byte = operator.div(Byte, 2)
+         Byte = operator.floordiv(Byte, 2)
          time.sleep(self.CLK_PERIOD)
          RPi.GPIO.output(self.RTC_DS1302_IO, Bit)
 
@@ -170,19 +170,26 @@ class RTC_DS1302:
 # Write address byte.
       self.WriteByte(int("10111110", 2))
 # Write seconds data.
-      self.WriteByte(operator.mod(Second, 10) | operator.div(Second, 10) * 16)
+      #self.WriteByte(operator.mod(Second, 10) | operator.div(Second, 10) * 16)
+      self.WriteByte(operator.mod(int(Second), 10) | operator.floordiv(int(Second), 10) * 16)
 # Write minute data.
-      self.WriteByte(operator.mod(Minute, 10) | operator.div(Minute, 10) * 16)
+      #self.WriteByte(operator.mod(Minute, 10) | operator.div(Minute, 10) * 16)
+      self.WriteByte(operator.mod(int(Minute), 10) | operator.floordiv(int(Minute), 10) * 16)
 # Write hour data.
-      self.WriteByte(operator.mod(Hour, 10) | operator.div(Hour, 10) * 16)
+      #self.WriteByte(operator.mod(Hour, 10) | operator.div(Hour, 10) * 16)
+      self.WriteByte(operator.mod(int(Hour), 10) | operator.floordiv(int(Hour), 10) * 16)
 # Write day data.
-      self.WriteByte(operator.mod(Day, 10) | operator.div(Day, 10) * 16)
+      #self.WriteByte(operator.mod(Day, 10) | operator.div(Day, 10) * 16)
+      self.WriteByte(operator.mod(int(Day), 10) | operator.floordiv(int(Day), 10) * 16)
 # Write month data.
-      self.WriteByte(operator.mod(Month, 10) | operator.div(Month, 10) * 16)
+      #self.WriteByte(operator.mod(Month, 10) | operator.div(Month, 10) * 16)
+      self.WriteByte(operator.mod(int(Month), 10) | operator.floordiv(int(Month), 10) * 16)
 # Write day of week data.
-      self.WriteByte(operator.mod(DayOfWeek, 10) | operator.div(DayOfWeek, 10) * 16)
+      #self.WriteByte(operator.mod(DayOfWeek, 10) | operator.div(DayOfWeek, 10) * 16)
+      self.WriteByte(operator.mod(int(DayOfWeek), 10) | operator.floordiv(int(DayOfWeek), 10) * 16)
 # Write year of week data.
-      self.WriteByte(operator.mod(Year, 10) | operator.div(Year, 10) * 16)
+      #self.WriteByte(operator.mod(Year, 10) | operator.div(Year, 10) * 16)
+      self.WriteByte(operator.mod(int(Year), 10) | operator.floordiv(int(Year), 10) * 16)
 # Make sure write protect is turned off.
       self.WriteByte(int("00000000", 2))
 # Make sure trickle charge mode is turned off.
@@ -203,19 +210,26 @@ class RTC_DS1302:
       Data = ""
 
       Byte = self.ReadByte()
-      DateTime["Second"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      #DateTime["Second"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      DateTime["Second"] = operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10
       Byte = self.ReadByte()
-      DateTime["Minute"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      #DateTime["Minute"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      DateTime["Minute"] = operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10
       Byte = self.ReadByte()
-      DateTime["Hour"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      #DateTime["Hour"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      DateTime["Hour"] = operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10
       Byte = self.ReadByte()
-      DateTime["Day"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      #DateTime["Day"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      DateTime["Day"] = operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10
       Byte = self.ReadByte()
-      DateTime["Month"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      #DateTime["Month"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      DateTime["Month"] = operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10
       Byte = self.ReadByte()
-      DateTime["DayOfWeek"] = (operator.mod(Byte, 16) + operator.div(Byte, 16) * 10) - 1
+      #DateTime["DayOfWeek"] = (operator.mod(Byte, 16) + operator.div(Byte, 16) * 10) - 1
+      DateTime["DayOfWeek"] = (operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10) - 1
       Byte = self.ReadByte()
-      DateTime["Year"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      #DateTime["Year"] = operator.mod(Byte, 16) + operator.div(Byte, 16) * 10
+      DateTime["Year"] = operator.mod(Byte, 16) + operator.floordiv(Byte, 16) * 10
 
       Data = self.DOW[DateTime["DayOfWeek"]] + " " + format(DateTime["Year"] + 2000, "04d") + "-" + format(DateTime["Month"], "02d") + "-" + format(DateTime["Day"], "02d")
       Data += " " + format(DateTime["Hour"], "02d") + ":" + format(DateTime["Minute"], "02d") + ":" + format(DateTime["Second"], "02d")

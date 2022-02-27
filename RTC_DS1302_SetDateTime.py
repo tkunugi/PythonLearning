@@ -4,6 +4,17 @@ import time
 
 ThisRTC = RTC_DS1302.RTC_DS1302()
 
+yr = input('Year(2 digits):')
+mo = input('Month:')
+dy = input('Day:')
+dw = input('Day of week (0 - 6):')
+hr = input('Hour:')
+mi = input('Minutes:')
+sc = input('Second:')
+ThisRTC.WriteDateTime(yr, mo, dy, dw, hr, mi, sc)
+
+
+
 Data = ThisRTC.ReadRAM()
 print("Message: " + Data)
 DateTime = { "Year":0, "Month":0, "Day":0, "DayOfWeek":0, "Hour":0, "Minute":0, "Second":0 }
