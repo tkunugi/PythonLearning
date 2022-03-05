@@ -263,3 +263,240 @@
 2022-03-05 21:38:32,522 - CCS811 - DEBUG - Read 0x90 from register 0x00
 2022-03-05 21:38:32,523 - CCS811 - DEBUG - Read 0x90 from register 0x00
 2022-03-05 21:38:32,524 - CCS811 - DEBUG - Read 0x90 from register 0x00
+2022-03-05 21:53:05,043 - CCS811 - DEBUG - Read 0x81 from register 0x20
+2022-03-05 21:53:05,045 - CCS811 - DEBUG - Wrote to register 0xF4: []
+2022-03-05 21:53:06,149 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:06,152 - CCS811 - DEBUG - Wrote 0x08 to register 0x01
+2022-03-05 21:53:06,155 - CCS811 - DEBUG - Wrote 0x18 to register 0x01
+2022-03-05 21:53:07,161 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:08,163 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:09,167 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:09,171 - CCS811 - DEBUG - Read the following from register 0x02: [0, 0, 0, 0, 152, 0, 18, 30]
+2022-03-05 21:53:12,179 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:13,181 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:13,183 - CCS811 - DEBUG - Read the following from register 0x02: [129, 205, 0, 9, 152, 0, 13, 137]
+2022-03-05 21:53:16,187 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:17,191 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:17,194 - CCS811 - DEBUG - Read the following from register 0x02: [1, 205, 0, 9, 152, 0, 13, 137]
+2022-03-05 21:53:20,201 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:21,204 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:21,209 - CCS811 - DEBUG - Read the following from register 0x02: [1, 201, 0, 8, 152, 0, 13, 138]
+2022-03-05 21:53:24,214 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:25,218 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:25,222 - CCS811 - DEBUG - Read the following from register 0x02: [1, 210, 0, 10, 152, 0, 13, 136]
+2022-03-05 21:53:28,227 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:29,232 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:29,235 - CCS811 - DEBUG - Read the following from register 0x02: [1, 205, 0, 9, 152, 0, 13, 137]
+2022-03-05 21:53:32,240 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:33,244 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:33,246 - CCS811 - DEBUG - Read the following from register 0x02: [129, 201, 0, 136, 152, 0, 13, 138]
+2022-03-05 21:53:36,252 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:37,256 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:37,265 - CCS811 - DEBUG - Read the following from register 0x02: [1, 210, 0, 10, 152, 0, 13, 136]
+2022-03-05 21:53:40,271 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:41,275 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:41,278 - CCS811 - DEBUG - Read the following from register 0x02: [1, 201, 0, 8, 152, 0, 13, 138]
+2022-03-05 21:53:44,283 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:45,287 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:45,291 - CCS811 - DEBUG - Read the following from register 0x02: [1, 205, 0, 9, 152, 0, 13, 137]
+2022-03-05 21:53:48,296 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:49,300 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:49,301 - CCS811 - DEBUG - Read the following from register 0x02: [129, 201, 0, 8, 152, 0, 141, 138]
+2022-03-05 21:53:52,308 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:53,310 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:53,312 - CCS811 - DEBUG - Read the following from register 0x02: [129, 205, 0, 9, 152, 0, 13, 137]
+2022-03-05 21:53:56,318 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:57,321 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:53:57,325 - CCS811 - DEBUG - Read the following from register 0x02: [1, 201, 0, 8, 152, 0, 13, 138]
+2022-03-05 21:54:00,331 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:01,335 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:01,339 - CCS811 - DEBUG - Read the following from register 0x02: [1, 201, 0, 8, 152, 0, 13, 138]
+2022-03-05 21:54:04,345 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:05,347 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:08,355 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:09,358 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:09,363 - CCS811 - DEBUG - Read the following from register 0x02: [6, 36, 0, 223, 152, 0, 12, 107]
+2022-03-05 21:54:12,370 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:13,374 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:13,378 - CCS811 - DEBUG - Read the following from register 0x02: [1, 144, 0, 0, 152, 0, 12, 185]
+2022-03-05 21:54:16,385 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:17,396 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:17,400 - CCS811 - DEBUG - Read the following from register 0x02: [1, 206, 0, 9, 152, 0, 13, 8]
+2022-03-05 21:54:20,406 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:21,409 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:21,411 - CCS811 - DEBUG - Read the following from register 0x02: [1, 144, 0, 0, 152, 0, 13, 36]
+2022-03-05 21:54:24,416 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:25,420 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:25,424 - CCS811 - DEBUG - Read the following from register 0x02: [1, 222, 0, 11, 152, 0, 13, 24]
+2022-03-05 21:54:28,430 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:29,434 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:29,438 - CCS811 - DEBUG - Read the following from register 0x02: [2, 30, 0, 21, 152, 0, 13, 16]
+2022-03-05 21:54:32,445 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:33,448 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:33,452 - CCS811 - DEBUG - Read the following from register 0x02: [1, 144, 0, 0, 152, 0, 13, 77]
+2022-03-05 21:54:36,457 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:37,460 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:37,461 - CCS811 - DEBUG - Read the following from register 0x02: [1, 144, 0, 0, 152, 0, 13, 108]
+2022-03-05 21:54:40,466 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:41,470 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:41,474 - CCS811 - DEBUG - Read the following from register 0x02: [1, 210, 0, 10, 152, 0, 13, 103]
+2022-03-05 21:54:44,480 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:45,484 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:45,487 - CCS811 - DEBUG - Read the following from register 0x02: [1, 210, 0, 10, 152, 0, 13, 103]
+2022-03-05 21:54:48,492 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:49,496 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:49,500 - CCS811 - DEBUG - Read the following from register 0x02: [2, 66, 0, 27, 152, 0, 13, 85]
+2022-03-05 21:54:52,505 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:54:59,576 - CCS811 - DEBUG - Read 0x81 from register 0x20
+2022-03-05 21:54:59,578 - CCS811 - DEBUG - Wrote to register 0xF4: []
+2022-03-05 21:55:00,680 - CCS811 - DEBUG - Read 0x99 from register 0x00
+2022-03-05 21:55:08,255 - CCS811 - DEBUG - Read 0x81 from register 0x20
+2022-03-05 21:55:08,257 - CCS811 - DEBUG - Wrote to register 0xF4: []
+2022-03-05 21:55:09,360 - CCS811 - DEBUG - Read 0x99 from register 0x00
+2022-03-05 21:55:56,179 - CCS811 - DEBUG - Read 0x81 from register 0x20
+2022-03-05 21:55:56,180 - CCS811 - DEBUG - Wrote to register 0xF4: []
+2022-03-05 21:55:57,283 - CCS811 - DEBUG - Read 0x90 from register 0x00
+2022-03-05 21:55:57,284 - CCS811 - DEBUG - Wrote 0x08 to register 0x01
+2022-03-05 21:55:57,285 - CCS811 - DEBUG - Wrote 0x18 to register 0x01
+2022-03-05 21:55:58,288 - CCS811 - DEBUG - Read 0x90 from register 0x00
+2022-03-05 21:55:59,291 - CCS811 - DEBUG - Read 0x90 from register 0x00
+2022-03-05 21:56:00,294 - CCS811 - DEBUG - Read 0x90 from register 0x00
+2022-03-05 21:56:01,296 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:02,298 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:03,301 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:03,302 - CCS811 - DEBUG - Read the following from register 0x02: [129, 170, 0, 3, 152, 0, 13, 158]
+2022-03-05 21:56:06,306 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:07,309 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:07,312 - CCS811 - DEBUG - Read the following from register 0x02: [1, 196, 0, 7, 152, 0, 13, 152]
+2022-03-05 21:56:10,316 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:11,318 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:11,320 - CCS811 - DEBUG - Read the following from register 0x02: [1, 220, 0, 11, 152, 0, 13, 147]
+2022-03-05 21:56:14,324 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:15,326 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:15,328 - CCS811 - DEBUG - Read the following from register 0x02: [1, 207, 0, 9, 152, 0, 13, 149]
+2022-03-05 21:56:18,333 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:19,335 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:19,337 - CCS811 - DEBUG - Read the following from register 0x02: [129, 236, 0, 14, 152, 0, 13, 144]
+2022-03-05 21:56:22,342 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:23,345 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:23,348 - CCS811 - DEBUG - Read the following from register 0x02: [1, 236, 0, 14, 152, 0, 13, 144]
+2022-03-05 21:56:26,353 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:27,355 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:27,359 - CCS811 - DEBUG - Read the following from register 0x02: [1, 241, 0, 14, 152, 0, 13, 143]
+2022-03-05 21:56:30,363 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:31,365 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:31,367 - CCS811 - DEBUG - Read the following from register 0x02: [129, 236, 0, 14, 152, 0, 13, 144]
+2022-03-05 21:56:34,372 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:35,375 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:35,378 - CCS811 - DEBUG - Read the following from register 0x02: [1, 250, 0, 16, 152, 0, 13, 141]
+2022-03-05 21:56:38,383 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:39,386 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:39,389 - CCS811 - DEBUG - Read the following from register 0x02: [2, 6, 0, 17, 152, 0, 13, 140]
+2022-03-05 21:56:42,393 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:43,396 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:43,399 - CCS811 - DEBUG - Read the following from register 0x02: [1, 250, 0, 16, 152, 0, 13, 141]
+2022-03-05 21:56:46,404 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:47,406 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:47,409 - CCS811 - DEBUG - Read the following from register 0x02: [2, 11, 0, 18, 152, 0, 13, 139]
+2022-03-05 21:56:50,414 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:51,417 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:51,418 - CCS811 - DEBUG - Read the following from register 0x02: [2, 21, 0, 148, 152, 0, 13, 137]
+2022-03-05 21:56:54,421 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:55,423 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:55,427 - CCS811 - DEBUG - Read the following from register 0x02: [2, 44, 0, 23, 152, 0, 13, 133]
+2022-03-05 21:56:58,432 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:59,434 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:56:59,435 - CCS811 - DEBUG - Read the following from register 0x02: [130, 161, 0, 22, 152, 0, 13, 135]
+2022-03-05 21:57:02,439 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:03,442 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:03,445 - CCS811 - DEBUG - Read the following from register 0x02: [2, 33, 0, 22, 152, 0, 13, 135]
+2022-03-05 21:57:06,449 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:07,451 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:07,453 - CCS811 - DEBUG - Read the following from register 0x02: [2, 28, 0, 21, 152, 0, 13, 136]
+2022-03-05 21:57:10,457 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:11,459 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:11,461 - CCS811 - DEBUG - Read the following from register 0x02: [2, 28, 0, 21, 152, 0, 13, 136]
+2022-03-05 21:57:14,465 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:15,466 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:15,467 - CCS811 - DEBUG - Read the following from register 0x02: [2, 39, 0, 23, 152, 128, 13, 134]
+2022-03-05 21:57:18,471 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:19,474 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:19,478 - CCS811 - DEBUG - Read the following from register 0x02: [2, 44, 0, 23, 152, 0, 13, 133]
+2022-03-05 21:57:22,482 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:23,485 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:23,489 - CCS811 - DEBUG - Read the following from register 0x02: [2, 49, 0, 24, 152, 0, 13, 132]
+2022-03-05 21:57:26,493 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:27,496 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:27,499 - CCS811 - DEBUG - Read the following from register 0x02: [2, 49, 0, 24, 152, 0, 13, 132]
+2022-03-05 21:57:30,503 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:31,506 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:31,509 - CCS811 - DEBUG - Read the following from register 0x02: [2, 58, 0, 25, 152, 0, 13, 131]
+2022-03-05 21:57:34,514 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:35,516 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:35,519 - CCS811 - DEBUG - Read the following from register 0x02: [2, 65, 0, 26, 152, 0, 13, 130]
+2022-03-05 21:57:38,523 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:39,526 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:39,527 - CCS811 - DEBUG - Read the following from register 0x02: [2, 58, 0, 153, 152, 0, 13, 131]
+2022-03-05 21:57:42,531 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:43,534 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:43,538 - CCS811 - DEBUG - Read the following from register 0x02: [2, 58, 0, 25, 152, 0, 13, 131]
+2022-03-05 21:57:46,543 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:47,546 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:47,550 - CCS811 - DEBUG - Read the following from register 0x02: [2, 49, 0, 24, 152, 0, 13, 132]
+2022-03-05 21:57:50,554 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:51,557 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:51,560 - CCS811 - DEBUG - Read the following from register 0x02: [2, 49, 0, 24, 152, 0, 13, 132]
+2022-03-05 21:57:54,565 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:55,566 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:55,568 - CCS811 - DEBUG - Read the following from register 0x02: [2, 49, 0, 24, 152, 0, 13, 132]
+2022-03-05 21:57:58,573 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:59,576 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:57:59,580 - CCS811 - DEBUG - Read the following from register 0x02: [2, 58, 0, 25, 152, 0, 13, 131]
+2022-03-05 21:58:02,585 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:03,588 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:03,591 - CCS811 - DEBUG - Read the following from register 0x02: [2, 68, 0, 27, 152, 0, 13, 129]
+2022-03-05 21:58:06,595 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:07,598 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:07,601 - CCS811 - DEBUG - Read the following from register 0x02: [2, 65, 0, 26, 152, 0, 13, 130]
+2022-03-05 21:58:10,606 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:11,608 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:11,611 - CCS811 - DEBUG - Read the following from register 0x02: [2, 76, 0, 28, 152, 0, 13, 128]
+2022-03-05 21:58:14,616 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:15,619 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:15,623 - CCS811 - DEBUG - Read the following from register 0x02: [2, 68, 0, 27, 152, 0, 13, 129]
+2022-03-05 21:58:18,628 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:19,630 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:19,633 - CCS811 - DEBUG - Read the following from register 0x02: [2, 76, 0, 28, 152, 0, 13, 128]
+2022-03-05 21:58:22,637 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:23,639 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:23,643 - CCS811 - DEBUG - Read the following from register 0x02: [2, 85, 0, 30, 152, 0, 13, 127]
+2022-03-05 21:58:26,648 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:27,650 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:27,652 - CCS811 - DEBUG - Read the following from register 0x02: [130, 85, 0, 30, 152, 0, 13, 127]
+2022-03-05 21:58:30,657 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:31,660 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:31,664 - CCS811 - DEBUG - Read the following from register 0x02: [2, 85, 0, 30, 152, 0, 13, 127]
+2022-03-05 21:58:34,669 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:35,672 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:35,675 - CCS811 - DEBUG - Read the following from register 0x02: [2, 76, 0, 28, 152, 0, 13, 128]
+2022-03-05 21:58:38,680 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:39,682 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:39,686 - CCS811 - DEBUG - Read the following from register 0x02: [2, 76, 0, 28, 152, 0, 13, 128]
+2022-03-05 21:58:42,691 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:43,694 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:43,696 - CCS811 - DEBUG - Read the following from register 0x02: [130, 85, 0, 30, 152, 128, 13, 127]
+2022-03-05 21:58:46,702 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:47,705 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:47,709 - CCS811 - DEBUG - Read the following from register 0x02: [2, 85, 0, 30, 152, 0, 13, 127]
+2022-03-05 21:58:50,713 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:51,716 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:51,720 - CCS811 - DEBUG - Read the following from register 0x02: [2, 85, 0, 30, 152, 0, 13, 127]
+2022-03-05 21:58:54,724 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:55,727 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:55,730 - CCS811 - DEBUG - Read the following from register 0x02: [2, 88, 0, 30, 152, 0, 13, 126]
+2022-03-05 21:58:58,735 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:59,737 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:58:59,739 - CCS811 - DEBUG - Read the following from register 0x02: [129, 255, 255, 127, 127, 127, 127, 127]
+2022-03-05 21:59:02,744 - CCS811 - DEBUG - Read 0x98 from register 0x00
+2022-03-05 21:59:03,746 - CCS811 - DEBUG - Read 0x99 from register 0x00
+2022-03-05 21:59:03,750 - CCS811 - DEBUG - Read the following from register 0x02: [2, 76, 0, 28, 153, 2, 13, 128]

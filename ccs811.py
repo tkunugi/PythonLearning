@@ -107,6 +107,8 @@ class CCS811:
         return self._status.ERROR
 
     def readU8(self, register):
+        #
+        sleep(1) #Remote I/O errorが出るため追加
         result = self._bus.read_byte_data(self._address, register) & 0xFF
         self._logger.debug("Read 0x%02X from register 0x%02X", result, register)
         return result
