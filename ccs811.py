@@ -24,7 +24,7 @@ CCS811_BOOTLOADER_APP_START = 0xF4
 CCS811_HW_ID_CODE = 0x81
 
 class CCS811:
-    LOG_FILE = '{script_dir}/logs/ccs811.log'.format(
+    LOG_FILE = '{script_dir}/../logs/ccs811.log'.format(
         script_dir = os.path.dirname(os.path.abspath(__file__))
     )
 
