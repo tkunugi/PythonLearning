@@ -119,6 +119,8 @@ try:
         css811_return = ccs811.ccs811print()
         #print('co2, tvoc: ', css811_return)
         co2_f = str(css811_return[0])
+        
+        
         tvoc_f = str(css811_return[1])
         #co2_f = '{:.4g}'.format(510)
         #tvoc_f = '{:.4g}'.format(100)
