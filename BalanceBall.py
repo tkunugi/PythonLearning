@@ -1,4 +1,4 @@
-from turtle import distance
+#from turtle import distance
 from gpiozero import AngularServo, DistanceSensor
 from time import sleep
 from mpu6050 import mpu6050
@@ -6,7 +6,7 @@ from mpu6050 import mpu6050
 
 servo = AngularServo(5, min_pulse_width=0.5/1000, max_pulse_width=2.4/1000)
 sensor_gyro = mpu6050(0x68)
-sensor_dist = DistanceSensor(trigger = 20, echo = 21, max_distance=2.0)
+sensor = DistanceSensor(trigger = 20, echo = 21, max_distance=2.0)
 
 def servo_test():
     #サーボモーターの駆動チェック　回転位置が0°→-20°→+20°→0°で駆動
@@ -38,15 +38,15 @@ def gyro_test():
 def dist_test():
     #距離センサーのテスト　読み取り値を1秒ごとに3回表示
     for i in range(3):
-        distance = sensor_dist.distance * 100
+        distance = sensor.distance * 100
         print('Distance : %.1f' % distance)
         sleep(1)
 
 
 def main():
-    #servo_test()
-    #gyro_test()
-    dist_test
+    servo_test()
+    gyro_test()
+    dist_test()
     servo.angle = 0
 
 if __name__ == '__main__':

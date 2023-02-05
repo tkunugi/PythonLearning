@@ -1,4 +1,3 @@
-#from turtle import distance
 from gpiozero import DistanceSensor
 from time import sleep
 
