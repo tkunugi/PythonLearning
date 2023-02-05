@@ -9,18 +9,34 @@ sensor_gyro = mpu6050(0x68)
 sensor = DistanceSensor(trigger = 20, echo = 21, max_distance=2.0)
 
 def servo_test():
-    #サーボモーターの駆動チェック　回転位置が0°→-20°→+20°→0°で駆動
-    for i in list(range(0,-20,-1)):
+    #サーボモーターの駆動チェック　回転位置が0°→-5°→+5°→0°で駆動
+    for i in list(range(0,-5,-1)):
         servo.angle = i
-        sleep(0.05)
+        sleep(0.5)
     
-    for i in list(range(-20,20, 1)):
+    for i in list(range(-5,5, 1)):
         servo.angle = i
-        sleep(0.05)
+        sleep(0.5)
 
-    for i in list(range(20,0,-1)):
+    for i in list(range(5,0,-1)):
         servo.angle = i
-        sleep(0.05)
+        sleep(0.5)
+
+    servo.angle = 0
+
+def servo_test90():
+    #サーボモーターの駆動チェック　回転位置が0°→-90°→+90°→0°で駆動
+    for i in list(range(0,-90,-1)):
+        servo.angle = i
+        sleep(0.1)
+    
+    for i in list(range(-90,90, 1)):
+        servo.angle = i
+        sleep(0.1)
+
+    for i in list(range(90,0,-1)):
+        servo.angle = i
+        sleep(0.1)
 
     servo.angle = 0
 
@@ -44,9 +60,10 @@ def dist_test():
 
 
 def main():
-    servo_test()
-    gyro_test()
-    dist_test()
+    #servo_test()
+    #gyro_test()
+    #dist_test()
+    #servo.test90()
     servo.angle = 0
 
 if __name__ == '__main__':
