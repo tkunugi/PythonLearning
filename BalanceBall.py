@@ -1,44 +1,51 @@
-#from turtle import distance
-from gpiozero import AngularServo, DistanceSensor
+from gpiozero import DistanceSensor
 from time import sleep
 from mpu6050 import mpu6050
+import pigpio
 
-
-servo = AngularServo(5, min_pulse_width=0.5/1000, max_pulse_width=2.4/1000)
 sensor_gyro = mpu6050(0x68)
 sensor = DistanceSensor(trigger = 20, echo = 21, max_distance=2.0)
 
-def servo_test():
-    #サーボモーターの駆動チェック　回転位置が0°→-5°→+5°→0°で駆動
-    for i in list(range(0,-5,-1)):
-        servo.angle = i
-        sleep(0.5)
-    
-    for i in list(range(-5,5, 1)):
-        servo.angle = i
-        sleep(0.5)
+servo_pin = 18
 
-    for i in list(range(5,0,-1)):
-        servo.angle = i
-        sleep(0.5)
+pi = pigpio.pi()
+pi.set_mode(servo_pin, pigpio.OUTPUT)
+pwm_freq = 50   #SC90のPWMサイクル数
+time_m90 = 0.5  #-90°のときのパルス時間
+time_p90 = 2.4  #+90°のときのパルス時間
 
-    servo.angle = 0
+pwm_period = 1000 / pwm_freq  #PWM周期時間(msec)
+dutyM_m90 = 1e+6 * time_m90 / pwm_period  #-90°のときのduty比(100%は1,000,000)
+dutyM_p90 = 1e+6 * time_p90 / pwm_period  #-90°のときのduty比(100%は1,000,000)
+
+def angle_dutyM(deg):
+    #角度(°)から、duty比(100%は1,000,000)に換算
+    dutyM = int(dutyM_m90 + (dutyM_p90 - dutyM_m90) * ((deg + 90) / 180))
+    return dutyM
+
 
 def servo_test90():
-    #サーボモーターの駆動チェック　回転位置が0°→-90°→+90°→0°で駆動
-    for i in list(range(0,-90,-1)):
-        servo.angle = i
-        sleep(0.1)
-    
-    for i in list(range(-90,90, 1)):
-        servo.angle = i
-        sleep(0.1)
+    for i in range(0, -90, -1):
+        pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
+        sleep(0.01)
+        #print(i)
+    sleep(0.1)
 
-    for i in list(range(90,0,-1)):
-        servo.angle = i
-        sleep(0.1)
+    for i in range(-90, 90):
+        pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
+        sleep(0.01)
+        #print(i)
+    sleep(0.1)
 
-    servo.angle = 0
+    for i in range(90, 0, -1):
+        pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
+        sleep(0.01)
+        #print(i)
+    sleep(0.1)
+
+    pi.hardware_PWM(servo_pin, pwm_freq, 0)
+    pi.stop()
+
 
 def gyro_test():
     #ジャイロセンサーのテスト　読み取り値を1秒ごとに3回表示
@@ -63,8 +70,8 @@ def main():
     #servo_test()
     #gyro_test()
     #dist_test()
-    #servo.test90()
-    servo.angle = 0
+    servo_test90()
+    
 
 if __name__ == '__main__':
     main()
