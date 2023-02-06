@@ -1,3 +1,4 @@
+import numpy as np
 from gpiozero import DistanceSensor
 from time import sleep
 from mpu6050 import mpu6050
@@ -25,6 +26,7 @@ def angle_dutyM(deg):
 
 
 def servo_test90():
+    #サーボモーターの駆動テスト用(アームなしでのテスト用)　-0°→　-90° → +90° → 0°
     for i in range(0, -90, -1):
         pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
         sleep(0.01)
@@ -41,6 +43,32 @@ def servo_test90():
         pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
         sleep(0.01)
         #print(i)
+    sleep(0.1)
+
+def servo_test():
+    #サーボモーターの駆動テスト用(アームありでのテスト用)　-0°→　-5° → +5° → 0°
+    for i in np.arange(0., -5., -1):
+        pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
+        sleep(0.1)
+        pi.hardware_PWM(servo_pin, pwm_freq, 0)
+        sleep(2)
+        print(i)
+    sleep(0.1)
+
+    for i in np.arange(-5., 5., 1):
+        pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
+        sleep(0.1)
+        pi.hardware_PWM(servo_pin, pwm_freq, 0)
+        sleep(2)
+        print(i)
+    sleep(0.1)
+
+    for i in np.arange(5., 0., -1):
+        pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(i))
+        sleep(0.1)
+        pi.hardware_PWM(servo_pin, pwm_freq, 0)
+        sleep(2)
+        print(i)
     sleep(0.1)
 
     pi.hardware_PWM(servo_pin, pwm_freq, 0)
@@ -67,10 +95,10 @@ def dist_test():
 
 
 def main():
-    #servo_test()
+    servo_test()
     #gyro_test()
     #dist_test()
-    servo_test90()
+    #servo_test90()
     
 
 if __name__ == '__main__':
