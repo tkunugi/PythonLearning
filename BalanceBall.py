@@ -136,10 +136,13 @@ def gyro_test():
 
 def dist_test():
     #距離センサーのテスト　読み取り値を1秒ごとに3回表示
-    for i in range(100):
+    for i in range(10):
         distance = sensor.distance * 100
         print('Distance : %.2f' % distance)
         sleep(1)
+
+def get_move_response():
+    pass
 
 
 def main():
@@ -147,17 +150,39 @@ def main():
     duty_m5deg = angle_dutyM(-5)
     duty_p5deg = angle_dutyM(5)
     duty_0deg = angle_dutyM(0)
-    #servo_test0()
-    servo_test()
-    #gyro_test()
-    #dist_test()
-    #servo_test90()
-    arm_calibration()
-    print(f'duty_arm_calib: {duty_arm_calib}')
-    print(f'duty_m5deg: {duty_m5deg}')
-    print(f'duty_0deg: {duty_0deg}')
-    print(f'duty_p5deg: {duty_p5deg}')
-    servo_test()    
+
+    while True:   
+        print('1: サーボ駆動テスト(-90°〜+90°、アーム接続なし')
+        print('2: サーボ駆動テスト(-5°〜+5°)')
+        print('3: ジャイロセンサ動作テスト')
+        print('4: 距離センサ動作テスト')
+        print('5: アーム角度0°設定')
+        print('9: 試験動作実行')
+        print('Q: 終了')
+        menu = input('何番を起動しますか? ')
+        if menu == '1':
+            servo_test90()
+        elif menu == '2':
+            servo_test()
+        elif menu == '3':
+            gyro_test()
+        elif menu == '4':
+            dist_test()
+        elif menu == '5':
+            arm_calibration()
+            print(f'duty_arm_calib: {duty_arm_calib}')
+            print(f'duty_m5deg: {duty_m5deg}')
+            print(f'duty_0deg: {duty_0deg}')
+            print(f'duty_p5deg: {duty_p5deg}')
+        elif menu == '9':
+            get_move_response()
+        elif (menu == 'Q') or (menu == 'q'):
+            break
+        else:
+            print('メニューの番号を入力してください')
+    
+       
+   
 
 if __name__ == '__main__':
     main()
