@@ -1,7 +1,7 @@
 from gpiozero import Servo
 from time import sleep
 
-servo = Servo(16, min_pulse_width=0.5/1000, max_pulse_width=2.4/1000)
+servo = Servo(18, min_pulse_width=0.5/1000, max_pulse_width=2.4/1000)
 
 def main():
     while True:

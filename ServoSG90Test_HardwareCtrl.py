@@ -18,33 +18,22 @@ def angle_dutyM(deg):
     dutyM = int(dutyM_m90 + (dutyM_p90 - dutyM_m90) * ((deg + 90) / 180))
     return dutyM
 
-for i in range(0, -90, -1):
+for i in range(0, -90, -3):
     pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(i))
-    sleep(0.01)
+    sleep(0.1)
     print(i)
 
-for i in range(-90, 90):
+for i in range(-90, 90, 3):
     pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(i))
-    sleep(0.01)
+    sleep(0.1)
     print(i)
 
-for i in range(90, 0, -1):
+for i in range(90, 0, -3):
     pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(i))
-    sleep(0.01)
+    sleep(0.1)
     print(i)
 
 pi.hardware_PWM(gpio_pin, pwm_freq, 0)
 pi.stop()
 
-'''
-pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(-90))
-sleep(1)
-pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(0))
-sleep(1)
-pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(+90))
-sleep(1)
-pi.hardware_PWM(gpio_pin, pwm_freq, angle_dutyM(0))
-sleep(0.1)
-pi.hardware_PWM(gpio_pin, pwm_freq, 0)
-pi.stop()
-'''
+

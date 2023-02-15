@@ -33,24 +33,26 @@ def angle_dutyM(deg):
     return dutyM
 
 def servo_test90():
-    #サーボモーターの駆動テスト用(アームなしでのテスト用)　-0°→　-90° → +90° → 0°
-    for i in range(0, -90, -1):
+    #サーボモーターの駆動テスト用(アームなしでのテスト用) -0°→ -90° → +90° → 0°
+    for i in range(0, -90, -3):
         pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM_nocalib(i))
-        sleep(0.01)
+        sleep(0.1)
         #print(i)
     sleep(0.1)
 
-    for i in range(-90, 90):
+    for i in range(-90, 90, 3):
         pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM_nocalib(i))
-        sleep(0.01)
+        sleep(0.1)
         #print(i)
     sleep(0.1)
 
-    for i in range(90, 0, -1):
+    for i in range(90, 0, -3):
         pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM_nocalib(i))
-        sleep(0.01)
+        sleep(0.1)
         #print(i)
     sleep(0.1)
+
+    pi.hardware_PWM(servo_pin, pwm_freq, 0)
 
 def servo_test0():
     #サーボモーターの駆動テスト用(アームありでのテスト用) -0°→ -5° → +5° → 0°
@@ -85,21 +87,21 @@ def servo_test():
     #サーボモーターの駆動テスト用(アームありでのテスト用) -0°→ -5° → +5° → 0°
     # 角度変換関数を関数実行直後に使用し、その後直接数値で駆動することにより高速化を図った
     
-    for i in range(angle_dutyM(0.), angle_dutyM(-5.), -10):
+    for i in range(angle_dutyM(0.), angle_dutyM(-5.), -100):
         pi.hardware_PWM(servo_pin, pwm_freq, i)
-        sleep(0.01)
+        sleep(0.1)
         print(i)
     sleep(0.1)
 
-    for i in range(angle_dutyM(-5.), angle_dutyM(5.), 10):
+    for i in range(angle_dutyM(-5.), angle_dutyM(5.), 100):
         pi.hardware_PWM(servo_pin, pwm_freq, i)
-        sleep(0.01)
+        sleep(0.1)
         print(i)
     sleep(0.1)
 
-    for i in range(angle_dutyM(5.), angle_dutyM(0.), -10):
+    for i in range(angle_dutyM(5.), angle_dutyM(0.), -100):
         pi.hardware_PWM(servo_pin, pwm_freq, i)
-        sleep(0.01)
+        sleep(0.1)
         print(i)
     sleep(0.1)
 
@@ -123,12 +125,13 @@ def arm_calibration():
             pi.hardware_PWM(servo_pin, pwm_freq, duty)
         elif n == 0:
             duty_arm_calib = duty - angle_dutyM_nocalib(0)
+            pi.hardware_PWM(servo_pin, pwm_freq, 0)
             return
         else:
             print(f'値は{angle_dutyM_nocalib(-10)}から{angle_dutyM_nocalib(10)}の間で設定してください')
 
 def gyro_test():
-    #ジャイロセンサーのテスト　読み取り値を1秒ごとに3回表示
+    #ジャイロセンサーのテスト 読み取り値を1秒ごとに3回表示
     for i in range(3):
         gyro_data = sensor_gyro.get_gyro_data()
         accel_data = sensor_gyro.get_accel_data()
@@ -139,7 +142,7 @@ def gyro_test():
         sleep(1)
 
 def dist_test():
-    #距離センサーのテスト　読み取り値を1秒ごとに3回表示
+    #距離センサーのテスト 読み取り値を1秒ごとに3回表示
     for i in range(30):
         distance = sensor.distance * 100
         print('Distance : %.2f' % distance)
@@ -150,6 +153,18 @@ def get_move_response():
     data = pd.DataFrame(columns=['datetime', 'duty', 'distance'])
     columns = data.columns
 
+    while True:
+        n = input('何秒間試験をしますか (1〜6000秒)? ')
+        if n.isdigit() == False:
+            print('数値を入力してください')
+            continue
+        elif ((int(n) <= 1) or ( int(n) >= 6000)):
+            print('1〜6000の間で入力してください')
+            continue
+        else:
+            test_time = int(n) * 10 #試験時間を0.1秒を単位として設定
+            break
+    
     n = input('球をアームの中央付近に置いてください [OK: Enter, Quit:Q] ')
     if (n == 'Q') or (n == 'q'):
         return
@@ -193,7 +208,7 @@ def get_move_response():
     
     duty = angle_dutyM(0.)
 
-    for i in range(1000):
+    for i in range(test_time):
         pi.hardware_PWM(servo_pin, pwm_freq, duty)
         dist_raw = sensor.distance * 100
         dist = dist_raw if (dist_raw <= 40) & (dist_raw >= 0) else dist_pre
@@ -204,6 +219,7 @@ def get_move_response():
         duty += int((dist - 20.) * a1)
         duty = duty_limit_max if duty > duty_limit_max else duty
         duty = duty_limit_min if duty < duty_limit_min else duty
+        sleep(0.1)
     
     pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(0.))
     pi.hardware_PWM(servo_pin, pwm_freq, 0)
