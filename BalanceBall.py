@@ -153,6 +153,8 @@ def get_move_response():
     data = pd.DataFrame(columns=['datetime', 'duty', 'distance'])
     columns = data.columns
 
+    pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(0.))
+
     while True:
         n = input('何秒間試験をしますか (1〜6000秒)? ')
         if n.isdigit() == False:
@@ -164,6 +166,11 @@ def get_move_response():
         else:
             test_time = int(n) * 10 #試験時間を0.1秒を単位として設定
             break
+    
+    # a1 = -1.                          #比例制御係数
+    cp = float(input('制御係数比例項(初期値-1): '))
+    cd = float(input('制御係数微分項(初期値0): '))
+    p1 = float(input('制御係数積分項(初期値0): '))
     
     n = input('球をアームの中央付近に置いてください [OK: Enter, Quit:Q] ')
     if (n == 'Q') or (n == 'q'):
@@ -200,27 +207,32 @@ def get_move_response():
             print(i)
         sleep(0.1)
     '''
+    # 制御目標値の設定
+    dist_target = 20.    
     #
     duty_limit_max = angle_dutyM(5.)  #アーム振れ角の最大のデューティ比
     duty_limit_min = angle_dutyM(-5.) #アーム振れ角の最小のデューティ比
-    a1 = -1.                          #比例制御係数
-    dist_pre = 20 #距離測定が異常の際に前回値を使うための変数
+
+    dist_pre = 20. #　距離測定が異常の際に前回値を使うための変数
+    diff_1 = 0
+    # diff_2 = 0   # 積分項用に準備したが未使用
     
     duty = angle_dutyM(0.)
 
     for i in range(test_time):
         pi.hardware_PWM(servo_pin, pwm_freq, duty)
         dist_raw = sensor.distance * 100
-        dist = dist_raw if (dist_raw <= 40) & (dist_raw >= 0) else dist_pre
+        dist = dist_raw if (dist_raw <= 45) & (dist_raw >= 0) else dist_pre
         dist_pre = dist
         datum = pd.DataFrame([[datetime.datetime.now(), i, dist]], columns=columns)
         data = data.append(datum, ignore_index=True)
         print(f'#{i} Distance:{dist} Distance(raw)]{dist_raw} Duty:{duty}')
-        duty += int((dist - 20.) * a1)
+        diff = dist - dist_target #目標値との誤差
+        duty += int(diff * cp) + int((diff - diff_1) * cd) *0 #現状微分項は使用しないので0をかけている
         duty = duty_limit_max if duty > duty_limit_max else duty
         duty = duty_limit_min if duty < duty_limit_min else duty
         sleep(0.1)
-    
+        diff_1 = diff #次回ループ時に前回誤差として使用するために値をコピー
     pi.hardware_PWM(servo_pin, pwm_freq, angle_dutyM(0.))
     pi.hardware_PWM(servo_pin, pwm_freq, 0)
 
