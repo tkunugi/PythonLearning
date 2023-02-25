@@ -226,8 +226,8 @@ def get_move_response():
         dist_pre = dist
         datum = pd.DataFrame([[datetime.datetime.now(), i, dist]], columns=columns)
         data = data.append(datum, ignore_index=True)
-        print(f'#{i} Distance:{dist} Distance(raw)]{dist_raw} Duty:{duty}')
         diff = dist - dist_target #目標値との誤差
+        print(f'#{i} Distance:{dist:.2f}    Distance(raw):{dist_raw:.2f}    Distance Difference:{diff - diff_1:.2f}   Duty:{duty}')
         duty += int(diff * cp) + int((diff - diff_1) * cd) *0 #現状微分項は使用しないので0をかけている
         duty = duty_limit_max if duty > duty_limit_max else duty
         duty = duty_limit_min if duty < duty_limit_min else duty
